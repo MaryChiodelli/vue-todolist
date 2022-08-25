@@ -23,6 +23,14 @@ const app = new Vue({
         todos: todos,
         newTodo: ''
     },
+    computed: {
+        doneTodos() {
+            const filter = this.todos.filter((todo) => {
+                return todo.done;
+            });
+            return filter;
+        }
+    },
     methods: {
         toggleDone(todo) {
             todo.done = !todo.done;
