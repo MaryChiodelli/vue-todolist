@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todolist</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/app.css">
+    
     <script src="https://kit.fontawesome.com/1e0e3edb9d.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
 </head>
@@ -14,18 +19,20 @@
     <div id="app">
 
         <header>
-            <h1>Vue To Do List</h1>
+            <div class="container">
+                <h1>Vue To Do List</h1>
+            </div>
         </header>
 
         <main>
-            <div class="container">
-                <input @keyup.enter="addTodo" type="text" v-model="newTodo" placeholder="Type something...">
-                <input @click="addTodo" type="button" value="Aggiungi">
+            <div class="container form-wrapper">
+                <input @keyup.enter="addTodo" class="input" type="text" v-model="newTodo" placeholder="Type something...">
+                <input @click="addTodo" class="button" type="button" value="Aggiungi">
             </div>
 
-            <div class="container">
-                <ul>
-                    <li v-for="todo in todos" :class="todo.done ? 'done' : ''">
+            <div class="container list-wrapper">
+                <ul class="todo-list">
+                    <li v-for="todo in todos" :class="['todo-item', todo.done ? 'done' : '']">
                         <span @click="toggleDone(todo)">
                             {{ todo.text }}
                         </span>
@@ -34,9 +41,9 @@
                 </ul>
             </div>
 
-            <div class="container">
-                <ul>
-                    <li v-for="todo in doneTodos">
+            <div class="container list-wrapper">
+                <ul class="todo-list">
+                    <li v-for="todo in doneTodos" class="todo-item">
                         {{ todo.text }}
                     </li>
                 </ul>

@@ -1,4 +1,88 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #5A5A5A;
+}
+
+body {
+    background-color: #FAFAFA;
+}
+
+ul, ol, menu {
+    list-style: none;
+}
+
+input {
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+}
+
+h1 {
+    font-size: 3.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 5rem 0;
+    margin-bottom: -2.5rem;
+    background-color: #AA76F4;
+}
+
+.input {
+    border: 1px solid #AA76F4;
+    margin-right: 0.5rem;
+}
+
+.button {
+    border: 1px solid #AA76F4;
+    background-color: #AA76F4;
+    color: #FFFFFF;
+}
+
 .done {
-    color: gray;
+    color: #C4C4C4;
+}
+
+.done span {
     text-decoration: line-through;
+}
+
+.form-wrapper {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    
+    background-color: #FFFFFF;
+}
+
+.list-wrapper {
+    padding: 1.5rem 0;
+}
+
+.todo-list {
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+.todo-item {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #EDEDED;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-item:last-child {
+    border: none;
 }
