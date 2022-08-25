@@ -19,6 +19,11 @@
 
         <main>
             <div class="container">
+                <input type="text" v-model="newTodo" placeholder="Type something...">
+                <input @click="addTodo" type="button" value="Aggiungi">
+            </div>
+
+            <div class="container">
                 <ul>
                     <li v-for="todo in todos" :class="todo.done ? 'done' : ''">
                         {{ todo.text }}
