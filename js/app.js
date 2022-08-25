@@ -21,6 +21,11 @@ const app = new Vue({
     el: '#app',
     data: {
         todos: todos
+    },
+    methods: {
+        toggleDone(todo) {
+            todo.done = !todo.done;
+        }
     }
 });
 

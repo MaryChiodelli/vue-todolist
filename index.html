@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todolist</title>
     <link rel="stylesheet" href="./css/app.css">
+    <script src="https://kit.fontawesome.com/1e0e3edb9d.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
 </head>
 <body>
@@ -21,6 +22,7 @@
                 <ul>
                     <li v-for="todo in todos" :class="todo.done ? 'done' : ''">
                         {{ todo.text }}
+                        <i @click="toggleDone(todo)" class="fa-solid fa-xmark"></i>
                     </li>
                 </ul>
             </div>
